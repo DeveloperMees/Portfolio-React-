@@ -1,0 +1,227 @@
+.header-content {
+  .text-content {
+    h1 {
+      margin: 15px 0 20px 0;
+      color: #ffffff;
+    }
+
+    p {
+      line-height: 30px;
+      margin-bottom: 25px;
+      color: #ffffff;
+    }
+
+    .bottom-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .cv {
+        text-decoration: none;
+        color: #ffffff;
+      }
+    }
+
+    .scroll {
+      display: none;
+    }
+  }
+
+  .image-wrapper {
+    margin-top: 35px;
+
+    img {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+}
+
+.projects {
+  display: block;
+  position: relative;
+  z-index: 9;
+  background: #ffffff;
+  width: 85%;
+  margin: 60px auto 0 auto;
+  border-radius: 30px;
+  transition: width 0.8s ease-in-out;
+  max-width: 100%;
+  padding: 50px 0;
+
+  .swiper-container {
+    margin-top: 25px;
+  }
+
+  .project-image {
+    width: 100%;
+    border-radius: 6px;
+  }
+}
+
+.skills-content {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding: 60px 0;
+
+  h2 {
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  .skills {
+    transition: opacity 0.8s ease-in-out;
+    margin-top: 60px;
+
+    .skill {
+      max-width: 250px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+
+      p {
+        color: #FFFFFF;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.contact-content {
+  padding: 60px 0;
+
+  h2 {
+    color: #FFFFFF;
+  }
+
+
+  form {
+    padding: 20px 0;
+
+    input, textarea {
+      display: block;
+      width: 100%;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      margin: 10px 0;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border-radius: 0.375rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    textarea {
+      min-height: 150px;
+    }
+
+    .button {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .header-content {
+    height: calc(100vh - 245px);
+    display: flex;
+    justify-content: space-between;
+
+    .text-content {
+      margin-top: 60px;
+
+      p {
+        font-size: 18px;
+        margin-bottom: 45px;
+      }
+
+      .bottom-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .scroll {
+        display: block;
+        position: absolute;
+        bottom: 60px;
+        left: 45px;
+        text-decoration: none;
+
+        @keyframes bounce {
+          0% {
+            transform: translateY(0);
+          }
+
+          50% {
+            transform: translateY(-15px);
+          }
+
+          100% {
+            transform: translateY(0);
+          }
+        }
+
+        .button-scroll {
+          position: absolute;
+          left: -15px;
+          animation-name: bounce;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+
+          i {
+            display: unset;
+            font-size: 30px;
+            color: #FFF;
+          }
+        }
+
+      }
+    }
+
+    .image-wrapper {
+      margin-top: 0;
+
+      img {
+        max-width: unset;
+      }
+    }
+  }
+
+  .projects {
+    padding: 150px 0;
+    margin: 100px auto 0 auto;
+  }
+
+  .skills-content {
+    padding: 90px 0;
+
+    .skills {
+      .skill {
+        max-width: 200px;
+      }
+    }
+  }
+
+  .contact-content {
+    padding: 60px 0;
+
+    h2 {
+      color: #FFFFFF;
+    }
+
+
+    form {
+      max-width: 900px;
+    }
+  }
+}

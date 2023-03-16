@@ -1,0 +1,100 @@
+.header-content .text-content h1 {
+  margin: 15px 0 20px 0;
+  color: #ffffff; }
+
+.header-content .text-content p {
+  line-height: 30px;
+  margin-bottom: 25px;
+  color: #ffffff; }
+
+.header-content .text-content .bottom-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; }
+  .header-content .text-content .bottom-content .cv {
+    text-decoration: none;
+    color: #ffffff; }
+
+.header-content .text-content .scroll {
+  display: none; }
+
+.header-content .image-wrapper {
+  margin-top: 35px; }
+  .header-content .image-wrapper img {
+    width: 100%;
+    max-width: 600px; }
+
+.projects {
+  display: block;
+  position: relative;
+  z-index: 9;
+  background: #ffffff;
+  width: 85%;
+  margin: 100px auto 0 auto;
+  border-radius: 30px;
+  transition: width 0.8s ease-in-out;
+  max-width: 100%;
+  padding: 60px 0; }
+  .projects h1 {
+    transition: opacity 1s ease-in-out; }
+  .projects .swiper-container {
+    margin-top: 40px; }
+  .projects .project-image {
+    width: 100%;
+    border-radius: 6px; }
+
+.contact-content {
+  display: block;
+  position: relative;
+  z-index: 9;
+  background: #ffffff;
+  width: 85%;
+  margin: 100px auto 0 auto;
+  border-radius: 30px;
+  transition: width 0.8s ease-in-out;
+  max-width: 100%;
+  padding: 60px 0; }
+
+@media only screen and (min-width: 1000px) {
+  .header-content {
+    height: calc(100vh - 245px);
+    display: flex;
+    justify-content: space-between; }
+    .header-content .text-content {
+      margin-top: 60px; }
+      .header-content .text-content p {
+        font-size: 18px;
+        margin-bottom: 45px; }
+      .header-content .text-content .bottom-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px; }
+      .header-content .text-content .scroll {
+        display: block;
+        position: absolute;
+        bottom: 60px;
+        left: 45px;
+        text-decoration: none; }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); }
+    50% {
+      transform: translateY(-15px); }
+    100% {
+      transform: translateY(0); } }
+        .header-content .text-content .scroll .button-scroll {
+          position: absolute;
+          left: -15px;
+          animation-name: bounce;
+          animation-duration: 2s;
+          animation-iteration-count: infinite; }
+          .header-content .text-content .scroll .button-scroll i {
+            display: unset;
+            font-size: 30px;
+            color: #FFF; }
+    .header-content .image-wrapper {
+      margin-top: 0; }
+      .header-content .image-wrapper img {
+        max-width: unset; }
+  .projects {
+    padding: 85px 0 95px 0; } }
